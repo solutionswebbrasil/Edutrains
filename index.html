@@ -1,0 +1,281 @@
+<html><head><base href="/" /><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><title>Empresa de Cursos e Treinamentos</title>
+<style>
+:root {
+  --primary: #1a4b8c;
+  --secondary: #3178c6;
+  --accent: #f3a712;
+  --light: #f4f7fb;
+  --dark: #2c3e50;
+  --gray: #95a5a6;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Roboto', sans-serif;
+}
+
+body {
+  background-color: var(--light);
+  color: var(--dark);
+  line-height: 1.6;
+}
+
+/* Navigation */
+.navbar {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background: white;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+  z-index: 1000;
+  padding: 1rem 0;
+}
+
+.nav-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 2rem;
+}
+
+.logo {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: var(--primary);
+}
+
+.nav-links {
+  display: flex;
+  gap: 2rem;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: var(--dark);
+  font-weight: 500;
+  transition: color 0.3s ease;
+}
+
+.nav-links a:hover {
+  color: var(--secondary);
+}
+
+/* Hero Section */
+.hero {
+  height: 100vh;
+  background: linear-gradient(135deg, var(--primary), var(--secondary));
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: white;
+  padding-top: 80px;
+}
+
+.hero-content {
+  max-width: 800px;
+  padding: 2rem;
+}
+
+.hero h1 {
+  font-size: 3.5rem;
+  margin-bottom: 1.5rem;
+  animation: fadeInUp 1s ease;
+}
+
+.hero p {
+  font-size: 1.25rem;
+  margin-bottom: 2rem;
+  animation: fadeInUp 1s ease 0.2s;
+  opacity: 0;
+  animation-fill-mode: forwards;
+}
+
+.cta-button {
+  display: inline-block;
+  padding: 1rem 2.5rem;
+  background: var(--accent);
+  color: white;
+  text-decoration: none;
+  border-radius: 50px;
+  font-weight: bold;
+  transition: transform 0.3s ease;
+  animation: fadeInUp 1s ease 0.4s;
+  opacity: 0;
+  animation-fill-mode: forwards;
+}
+
+.cta-button:hover {
+  transform: translateY(-3px);
+}
+
+/* Featured Courses */
+.featured-courses {
+  padding: 5rem 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.section-title {
+  text-align: center;
+  margin-bottom: 3rem;
+}
+
+.courses-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+}
+
+.course-card {
+  background: white;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+  transition: transform 0.3s ease;
+}
+
+.course-card:hover {
+  transform: translateY(-5px);
+}
+
+.course-image {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
+
+.course-content {
+  padding: 1.5rem;
+}
+
+.course-title {
+  font-size: 1.25rem;
+  margin-bottom: 1rem;
+  color: var(--primary);
+}
+
+/* Animations */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .hero h1 {
+    font-size: 2.5rem;
+  }
+  
+  .nav-links {
+    display: none;
+  }
+  
+  .mobile-menu {
+    display: block;
+  }
+}
+</style>
+<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+</head>
+<body>
+  <nav class="navbar">
+    <div class="nav-container">
+      <div class="logo">EduTrain</div>
+      <div class="nav-links">
+        <a href="https://example.com">Início</a>
+        <a href="https://example.com/sobre">Sobre</a>
+        <a href="https://example.com/cursos">Cursos</a>
+        <a href="https://example.com/blog">Blog</a>
+        <a href="https://example.com/contato">Contato</a>
+      </div>
+    </div>
+  </nav>
+
+  <section class="hero">
+    <div class="hero-content">
+      <h1>Transforme seu futuro com conhecimento</h1>
+      <p>Cursos e treinamentos especializados para impulsionar sua carreira</p>
+      <a href="https://example.com/sobre" class="cta-button">Saiba Mais</a>
+    </div>
+  </section>
+
+  <section class="featured-courses">
+    <h2 class="section-title">Cursos em Destaque</h2>
+    <div class="courses-grid">
+      <div class="course-card">
+        <img src="course1.jpg" alt="Curso de Gestão de Projetos - pessoas trabalhando em equipe" class="course-image" width="300" height="200">
+        <div class="course-content">
+          <h3 class="course-title">Gestão de Projetos</h3>
+          <p>Aprenda metodologias ágeis e tradicional para gerenciar projetos com eficiência.</p>
+        </div>
+      </div>
+      
+      <div class="course-card">
+        <img src="course2.jpg" alt="Curso de Liderança - profissional apresentando em reunião" class="course-image" width="300" height="200">
+        <div class="course-content">
+          <h3 class="course-title">Liderança e Gestão de Equipes</h3>
+          <p>Desenvolva habilidades essenciais para liderar equipes de alto desempenho.</p>
+        </div>
+      </div>
+      
+      <div class="course-card">
+        <img src="course3.jpg" alt="Curso de Marketing Digital - pessoa analisando métricas" class="course-image" width="300" height="200">
+        <div class="course-content">
+          <h3 class="course-title">Marketing Digital</h3>
+          <p>Estratégias e ferramentas para destacar sua marca no ambiente digital.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+<script>
+// Smooth scroll for navigation links
+document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+    anchor.addEventListener('click', function (e) {
+        e.preventDefault();
+        document.querySelector(this.getAttribute('href')).scrollIntoView({
+            behavior: 'smooth'
+        });
+    });
+});
+
+// Navbar scroll effect
+window.addEventListener('scroll', function() {
+    const navbar = document.querySelector('.navbar');
+    if (window.scrollY > 50) {
+        navbar.style.background = 'rgba(255, 255, 255, 0.95)';
+        navbar.style.boxShadow = '0 2px 10px rgba(0,0,0,0.1)';
+    } else {
+        navbar.style.background = 'white';
+        navbar.style.boxShadow = 'none';
+    }
+});
+
+// Intersection Observer for animation on scroll
+const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+        if (entry.isIntersecting) {
+            entry.target.classList.add('animate');
+        }
+    });
+}, {
+    threshold: 0.1
+});
+
+document.querySelectorAll('.course-card').forEach((card) => {
+    observer.observe(card);
+});
+</script>
+</body>
+</html>
